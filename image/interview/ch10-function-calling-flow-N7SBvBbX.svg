@@ -1,0 +1,268 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+      .chip { fill: #e8f0ff; stroke: #2b5cff; stroke-width: 1.5; rx: 10; }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">Spring AI 函数调用（Tool / Function Calling）工作流</text>
+  <text class="muted" x="40" y="86">目标：让模型“提议”调用工具，由应用执行后再把结果回传给模型生成最终答案。</text>
+
+  <rect class="box" x="60" y="130" width="260" height="110"/>
+  <text class="text" x="90" y="170">1) 用户请求</text>
+  <text class="muted" x="90" y="198">例如：北京今天适合跑步吗？</text>
+
+  <rect class="box" x="350" y="130" width="260" height="110"/>
+  <text class="text" x="380" y="170">2) ChatClient + 工具声明</text>
+  <text class="muted" x="380" y="198">functions()/tools() + JSON Schema</text>
+
+  <rect class="box" x="640" y="130" width="260" height="110"/>
+  <text class="text" x="670" y="170">3) 模型决策</text>
+  <text class="muted" x="670" y="198">返回 “调用 getWeather(...)”</text>
+
+  <rect class="box" x="350" y="300" width="260" height="120"/>
+  <text class="text" x="380" y="342">4) 应用执行工具</text>
+  <text class="muted" x="380" y="370">调用天气 API / DB / 业务服务</text>
+  <rect class="chip" x="380" y="388" width="210" height="26"/>
+  <text class="muted" x="392" y="406">工具输出：结构化结果</text>
+
+  <rect class="box" x="640" y="300" width="260" height="120"/>
+  <text class="text" x="670" y="342">5) 回传工具结果</text>
+  <text class="muted" x="670" y="370">模型生成最终自然语言答案</text>
+  <rect class="chip" x="670" y="388" width="200" height="26"/>
+  <text class="muted" x="682" y="406">最终输出：可读文本</text>
+
+  <path class="arrow" d="M 320 185 L 350 185"/>
+  <path class="arrow" d="M 610 185 L 640 185"/>
+  <path class="arrow" d="M 770 240 L 770 300"/>
+  <path class="arrow" d="M 640 360 L 610 360"/>
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 640 360 L 610 360" opacity="0"/>
+  <path class="arrow" d="M 640 360 L 610 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360" opacity="0"/>
+
+  <path class="arrow" d="M 610 360 L 640 360"/>
+
+  <text class="muted" x="640" y="466">建议：把“工具执行”与“模型推理”做解耦，便于测试与审计。</text>
+</svg>

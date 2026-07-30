@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .accent { fill: #eef2ff; stroke: #6366f1; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">Spring AI 架构概览（示意）</text>
+  <text class="muted" x="40" y="86">统一 API + 多供应商适配 + Spring Boot 自动配置，让你用同一套编程模型接入不同大模型。</text>
+
+  <rect class="accent" x="70" y="130" width="820" height="110"/>
+  <text class="text" x="100" y="175">应用层（Spring Boot App）</text>
+  <text class="muted" x="100" y="202">Controller / Service / Job：注入 ChatClient、ImageClient、EmbeddingClient</text>
+
+  <rect class="box" x="70" y="270" width="820" height="110"/>
+  <text class="text" x="100" y="315">Spring AI 核心层</text>
+  <text class="muted" x="100" y="342">Prompt、Messages、Output Parser、Tool/Function Calling、Memory、VectorStore（可选）</text>
+
+  <rect class="box" x="70" y="410" width="250" height="90"/>
+  <text class="text" x="100" y="450">OpenAI 适配器</text>
+  <text class="muted" x="100" y="475">Chat / Image / Embedding</text>
+
+  <rect class="box" x="355" y="410" width="250" height="90"/>
+  <text class="text" x="385" y="450">Qwen 适配器</text>
+  <text class="muted" x="385" y="475">Chat / (VL) / Embedding</text>
+
+  <rect class="box" x="640" y="410" width="250" height="90"/>
+  <text class="text" x="670" y="450">DeepSeek 适配器</text>
+  <text class="muted" x="670" y="475">Chat / Reasoning</text>
+
+  <path class="arrow" d="M 480 240 L 480 270"/>
+  <path class="arrow" d="M 480 380 L 480 410"/>
+</svg>

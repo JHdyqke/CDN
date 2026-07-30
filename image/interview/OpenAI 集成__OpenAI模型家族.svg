@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .accent { fill: #ecfdf5; stroke: #10b981; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">OpenAI 模型家族（学习用示意）</text>
+  <text class="muted" x="40" y="86">不同模型在速度、成本、上下文长度、多模态能力上有差异，实际可用模型以你的 API 账户为准。</text>
+
+  <rect class="accent" x="70" y="130" width="820" height="90"/>
+  <text class="text" x="100" y="175">通用对话：gpt-4o-mini / gpt-4o（示例）</text>
+  <text class="muted" x="100" y="202">从便宜到更强：日常问答与生产级应用常用组合</text>
+
+  <rect class="box" x="70" y="250" width="820" height="90"/>
+  <text class="text" x="100" y="295">图像生成：DALL·E / Images API（示例）</text>
+  <text class="muted" x="100" y="322">适合：营销海报、插画、素材生成（建议加内容安全策略）</text>
+
+  <rect class="box" x="70" y="370" width="820" height="110"/>
+  <text class="text" x="100" y="415">工程建议</text>
+  <text class="muted" x="100" y="442">把模型名、温度、最大 token 等全部做成配置项，支持灰度与回滚</text>
+  <text class="muted" x="100" y="468">用日志/指标记录：请求耗时、token、失败原因，作为优化与成本治理依据</text>
+</svg>

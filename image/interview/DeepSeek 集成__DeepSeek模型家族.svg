@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .accent { fill: #eef2ff; stroke: #6366f1; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">DeepSeek 模型家族（学习用示意）</text>
+  <text class="muted" x="40" y="86">常见会区分：通用对话模型、偏推理模型、以及更轻量版本（以你的接入方为准）。</text>
+
+  <rect class="accent" x="70" y="130" width="820" height="90"/>
+  <text class="text" x="100" y="175">通用对话：deepseek-chat</text>
+  <text class="muted" x="100" y="202">适合问答、摘要、改写、客服等大多数场景</text>
+
+  <rect class="box" x="70" y="250" width="820" height="90"/>
+  <text class="text" x="100" y="295">推理增强：deepseek-reasoner（示例）</text>
+  <text class="muted" x="100" y="322">适合复杂分析、数学/代码推理、规划类任务</text>
+
+  <rect class="box" x="70" y="370" width="820" height="110"/>
+  <text class="text" x="100" y="415">工程建议</text>
+  <text class="muted" x="100" y="442">同一接口保留“模型选择参数”，按任务类型路由，避免全量用最贵模型</text>
+  <text class="muted" x="100" y="468">对推理任务优先使用结构化输出与工具调用，降低幻觉与不可控性</text>
+</svg>

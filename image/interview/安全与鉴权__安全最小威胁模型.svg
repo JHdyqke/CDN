@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .danger { fill: #fff1f2; stroke: #e11d48; stroke-width: 2; rx: 14; }
+      .safe { fill: #ecfdf5; stroke: #10b981; stroke-width: 2; rx: 14; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">安全与认证：Spring AI 应用的最小威胁模型</text>
+  <text class="muted" x="40" y="86">核心：密钥不落地、输入可控、工具可审计、输出可约束。</text>
+
+  <rect class="box" x="70" y="140" width="250" height="120"/>
+  <text class="text" x="100" y="180">客户端/用户</text>
+  <text class="muted" x="100" y="206">Web / App / 内部系统</text>
+
+  <rect class="danger" x="355" y="140" width="250" height="120"/>
+  <text class="text" x="385" y="180">风险区域</text>
+  <text class="muted" x="385" y="206">Prompt 注入、越权工具、敏感数据泄露</text>
+
+  <rect class="box" x="640" y="140" width="250" height="120"/>
+  <text class="text" x="670" y="180">模型提供方</text>
+  <text class="muted" x="670" y="206">Qwen / DeepSeek / OpenAI</text>
+
+  <rect class="safe" x="70" y="310" width="820" height="170"/>
+  <text class="text" x="100" y="350">防护措施（建议默认开启）</text>
+  <text class="muted" x="100" y="378">1) 密钥：环境变量/密钥管理 + 最小权限 + 定期轮换</text>
+  <text class="muted" x="100" y="404">2) 输入：长度限制、敏感词/PII 过滤、业务白名单参数</text>
+  <text class="muted" x="100" y="430">3) 工具：参数校验、审计日志、执行超时、RBAC</text>
+  <text class="muted" x="100" y="456">4) 输出：结构化输出校验、脱敏、内容安全策略</text>
+
+  <path class="arrow" d="M 320 200 L 355 200"/>
+  <path class="arrow" d="M 605 200 L 640 200"/>
+  <path class="arrow" d="M 480 260 L 480 310"/>
+</svg>

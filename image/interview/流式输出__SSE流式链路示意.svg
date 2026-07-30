@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+      .lane { fill: #eef2ff; stroke: #c7d2fe; stroke-width: 1.5; rx: 12; }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+
+  <text class="title" x="40" y="54">Spring AI 流式响应：服务端推送（SSE）链路示意</text>
+  <text class="muted" x="40" y="86">重点：从模型 token 流 → 后端 Flux → SSE → 浏览器逐字渲染。</text>
+
+  <rect class="lane" x="60" y="120" width="840" height="340"/>
+  <text class="muted" x="80" y="150">数据通路</text>
+
+  <rect class="box" x="90" y="190" width="210" height="90"/>
+  <text class="text" x="120" y="230">ChatClient.stream()</text>
+  <text class="muted" x="120" y="255">产生 ChatResponse 流</text>
+
+  <rect class="box" x="330" y="190" width="210" height="90"/>
+  <text class="text" x="360" y="230">映射为 token/片段</text>
+  <text class="muted" x="360" y="255">map / flatMapIterable</text>
+
+  <rect class="box" x="570" y="190" width="210" height="90"/>
+  <text class="text" x="600" y="230">SSE 序列化</text>
+  <text class="muted" x="600" y="255">ServerSentEvent&lt;String&gt;</text>
+
+  <rect class="box" x="330" y="320" width="450" height="100"/>
+  <text class="text" x="360" y="360">浏览器 EventSource</text>
+  <text class="muted" x="360" y="386">onmessage 追加 DOM，实现“打字机”体验</text>
+
+  <path class="arrow" d="M 300 235 L 330 235"/>
+  <path class="arrow" d="M 540 235 L 570 235"/>
+  <path class="arrow" d="M 675 280 L 675 320"/>
+
+  <text class="muted" x="90" y="500">小贴士：对长文本建议加背压策略、超时与断线重连，避免连接占满线程与内存。</text>
+</svg>

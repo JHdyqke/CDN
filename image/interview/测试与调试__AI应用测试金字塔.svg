@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .layer1 { fill: #ecfdf5; stroke: #10b981; stroke-width: 2; }
+      .layer2 { fill: #eef2ff; stroke: #6366f1; stroke-width: 2; }
+      .layer3 { fill: #fff7ed; stroke: #f97316; stroke-width: 2; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">测试与调试：AI 应用的“可重复”测试金字塔</text>
+  <text class="muted" x="40" y="86">建议把“模型不确定性”隔离在边界，内部逻辑用确定性单测覆盖。</text>
+
+  <polygon class="layer1" points="220,440 740,440 640,330 320,330"/>
+  <text class="text" x="410" y="395">单元测试（最多）</text>
+  <text class="muted" x="345" y="418">Mock ChatClient / 断言 prompt 组装、解析、业务规则</text>
+
+  <polygon class="layer2" points="320,330 640,330 580,250 380,250"/>
+  <text class="text" x="425" y="295">集成测试</text>
+  <text class="muted" x="405" y="318">Mock WebServer / 验证 HTTP 交互</text>
+
+  <polygon class="layer3" points="380,250 580,250 520,190 440,190"/>
+  <text class="text" x="438" y="225">端到端测试（最少）</text>
+  <text class="muted" x="360" y="246">小流量真实调用 + 录制回放（可选）</text>
+</svg>

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+      .kpi { fill: #fff7ed; stroke: #f97316; stroke-width: 2; rx: 14; }
+      .good { fill: #ecfdf5; stroke: #10b981; stroke-width: 2; rx: 14; }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">性能优化：从“慢且贵”到“快且稳”的关键抓手</text>
+  <text class="muted" x="40" y="86">主线：缓存 + 并发控制 + token 控制 + 资源治理。</text>
+
+  <rect class="kpi" x="70" y="140" width="250" height="120"/>
+  <text class="text" x="100" y="180">指标目标</text>
+  <text class="muted" x="100" y="206">P95 延迟、吞吐、成功率、成本</text>
+
+  <rect class="box" x="355" y="140" width="250" height="120"/>
+  <text class="text" x="385" y="180">治理手段</text>
+  <text class="muted" x="385" y="206">缓存 / 限流 / 异步 / 批处理</text>
+
+  <rect class="good" x="640" y="140" width="250" height="120"/>
+  <text class="text" x="670" y="180">结果</text>
+  <text class="muted" x="670" y="206">更低成本、更稳定体验</text>
+
+  <rect class="box" x="70" y="310" width="820" height="170"/>
+  <text class="text" x="100" y="350">常见优化点</text>
+  <text class="muted" x="100" y="378">- 提示词与上下文压缩：减少无效 token</text>
+  <text class="muted" x="100" y="404">- 结果缓存：相同输入复用输出（注意隐私与过期）</text>
+  <text class="muted" x="100" y="430">- 并发控制：Semaphore/RateLimiter，防止 429 雪崩</text>
+  <text class="muted" x="100" y="456">- 超时与熔断：快速失败 + 兜底内容</text>
+
+  <path class="arrow" d="M 320 200 L 355 200"/>
+  <path class="arrow" d="M 605 200 L 640 200"/>
+  <path class="arrow" d="M 480 260 L 480 310"/>
+</svg>

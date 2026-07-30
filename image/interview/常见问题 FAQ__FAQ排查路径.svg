@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .warn { fill: #fff7ed; stroke: #f97316; stroke-width: 2; rx: 14; }
+      .ok { fill: #ecfdf5; stroke: #10b981; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">常见问题排查路径（FAQ &amp; Troubleshooting）</text>
+  <text class="muted" x="40" y="86">从“配置”开始，依次排除：网络/鉴权 → 限流 → 模型响应 → 解析与业务逻辑。</text>
+
+  <rect class="box" x="70" y="130" width="260" height="110"/>
+  <text class="text" x="100" y="172">1) 配置是否生效？</text>
+  <text class="muted" x="100" y="200">profile、api-key、base-url、model</text>
+
+  <rect class="warn" x="350" y="130" width="260" height="110"/>
+  <text class="text" x="380" y="172">2) 401/403</text>
+  <text class="muted" x="380" y="200">密钥错误/权限不足/环境变量未注入</text>
+
+  <rect class="warn" x="630" y="130" width="260" height="110"/>
+  <text class="text" x="660" y="172">3) 429/限流</text>
+  <text class="muted" x="660" y="200">并发过高/配额不足/重试雪崩</text>
+
+  <rect class="box" x="70" y="300" width="260" height="120"/>
+  <text class="text" x="100" y="342">4) 超时/慢</text>
+  <text class="muted" x="100" y="370">缩短 prompt、流式、超时、缓存</text>
+
+  <rect class="box" x="350" y="300" width="260" height="120"/>
+  <text class="text" x="380" y="342">5) 输出不稳定</text>
+  <text class="muted" x="380" y="370">结构化输出、约束、工具调用</text>
+
+  <rect class="ok" x="630" y="300" width="260" height="120"/>
+  <text class="text" x="660" y="342">6) 加可观测性</text>
+  <text class="muted" x="660" y="370">日志/指标/追踪，定位问题更快</text>
+
+  <path class="arrow" d="M 330 185 L 350 185"/>
+  <path class="arrow" d="M 610 185 L 630 185"/>
+  <path class="arrow" d="M 200 240 L 200 300"/>
+  <path class="arrow" d="M 330 360 L 350 360"/>
+  <path class="arrow" d="M 610 360 L 630 360"/>
+</svg>

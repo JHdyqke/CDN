@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .accent { fill: #ecfeff; stroke: #0891b2; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">千问（Qwen）模型家族（学习用示意）</text>
+  <text class="muted" x="40" y="86">不同名称代表不同能力/成本/速度，实际可用模型以你的云平台控制台为准。</text>
+
+  <rect class="accent" x="70" y="130" width="820" height="90"/>
+  <text class="text" x="100" y="175">通用对话：qwen-turbo / qwen-plus / qwen-max</text>
+  <text class="muted" x="100" y="202">从快到强：速度快 → 平衡 → 更强推理与更高成本</text>
+
+  <rect class="box" x="70" y="250" width="820" height="90"/>
+  <text class="text" x="100" y="295">多模态（可选）：qwen-vl / qwen-omni（示例）</text>
+  <text class="muted" x="100" y="322">图像理解/描述/多模态输入输出（是否支持取决于接入方能力）</text>
+
+  <rect class="box" x="70" y="370" width="820" height="110"/>
+  <text class="text" x="100" y="415">工程建议</text>
+  <text class="muted" x="100" y="442">开发期优先用更便宜的模型，线上按任务路由：摘要/改写用快模型，复杂推理用强模型</text>
+  <text class="muted" x="100" y="468">同一业务保留可回退策略：失败时切换到备用模型或返回兜底内容</text>
+</svg>
