@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .accent { fill: #ecfeff; stroke: #0891b2; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">Spring AI Alibaba 架构概览（示意）</text>
+  <text class="muted" x="40" y="86">Spring AI 的编程模型 + 阿里云 DashScope（通义千问）能力，快速构建生产级 AI 应用。</text>
+
+  <rect class="accent" x="70" y="130" width="820" height="110"/>
+  <text class="text" x="100" y="175">应用层（Spring Boot）</text>
+  <text class="muted" x="100" y="202">Controller / Service / Job：注入 ChatClient、EmbeddingClient、（可选）ImageClient</text>
+
+  <rect class="box" x="70" y="270" width="820" height="110"/>
+  <text class="text" x="100" y="315">Spring AI 核心层</text>
+  <text class="muted" x="100" y="342">Prompt、Messages、Output Parser、Tools、Streaming、Memory、VectorStore</text>
+
+  <rect class="box" x="70" y="410" width="820" height="90"/>
+  <text class="text" x="100" y="450">Spring AI Alibaba 适配器</text>
+  <text class="muted" x="100" y="475">DashScope：Qwen Chat / Embeddings /（可选）VL，多环境配置与自动装配</text>
+
+  <path class="arrow" d="M 480 240 L 480 270"/>
+  <path class="arrow" d="M 480 380 L 480 410"/>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .accent { fill: #fdf2f8; stroke: #db2777; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">多模态（图文）输入：从图片到文字理解（示意）</text>
+  <text class="muted" x="40" y="86">输入可以是图片 URL / 本地文件（Resource）/ Base64，输出是文本或结构化结果。</text>
+
+  <rect class="box" x="70" y="160" width="250" height="120"/>
+  <text class="text" x="100" y="205">UserMessage</text>
+  <text class="muted" x="100" y="233">text + image</text>
+
+  <rect class="accent" x="355" y="160" width="250" height="120"/>
+  <text class="text" x="385" y="205">Vision Model</text>
+  <text class="muted" x="385" y="233">Qwen-VL 等</text>
+
+  <rect class="box" x="640" y="160" width="250" height="120"/>
+  <text class="text" x="670" y="205">输出</text>
+  <text class="muted" x="670" y="233">描述 / OCR / 结构化</text>
+
+  <rect class="box" x="70" y="330" width="820" height="120"/>
+  <text class="text" x="100" y="372">工程边界</text>
+  <text class="muted" x="100" y="400">大小限制、格式白名单、内容安全、隐私脱敏、存储与审计</text>
+
+  <path class="arrow" d="M 320 220 L 355 220"/>
+  <path class="arrow" d="M 605 220 L 640 220"/>
+  <path class="arrow" d="M 480 280 L 480 330"/>
+</svg>

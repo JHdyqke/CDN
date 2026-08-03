@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .accent { fill: #fff7ed; stroke: #f97316; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">性能与成本优化：从一次调用到稳定可控（示意）</text>
+  <text class="muted" x="40" y="86">优先顺序：限流与超时 → 缓存 → prompt 压缩 → 模型路由。</text>
+
+  <rect class="box" x="70" y="150" width="250" height="120"/>
+  <text class="text" x="100" y="195">入口治理</text>
+  <text class="muted" x="100" y="223">并发/限流/队列</text>
+
+  <rect class="accent" x="355" y="150" width="250" height="120"/>
+  <text class="text" x="385" y="195">调用治理</text>
+  <text class="muted" x="385" y="223">超时/重试/降级</text>
+
+  <rect class="box" x="640" y="150" width="250" height="120"/>
+  <text class="text" x="670" y="195">成本控制</text>
+  <text class="muted" x="670" y="223">缓存/压缩/路由</text>
+
+  <rect class="box" x="70" y="330" width="820" height="120"/>
+  <text class="text" x="100" y="372">关键指标</text>
+  <text class="muted" x="100" y="400">P50/P95 延迟、429 比例、成功率、重试次数、token/请求、成本/天</text>
+
+  <path class="arrow" d="M 320 210 L 355 210"/>
+  <path class="arrow" d="M 605 210 L 640 210"/>
+  <path class="arrow" d="M 480 270 L 480 330"/>
+</svg>

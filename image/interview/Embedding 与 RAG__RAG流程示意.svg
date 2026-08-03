@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .accent { fill: #eef2ff; stroke: #6366f1; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">RAG（检索增强生成）流程（示意）</text>
+  <text class="muted" x="40" y="86">把企业知识先向量化入库，回答时检索相关片段再让模型生成，降低幻觉。</text>
+
+  <rect class="box" x="70" y="150" width="260" height="110"/>
+  <text class="text" x="100" y="192">文档切分</text>
+  <text class="muted" x="100" y="220">chunk + metadata</text>
+
+  <rect class="box" x="350" y="150" width="260" height="110"/>
+  <text class="text" x="380" y="192">向量化</text>
+  <text class="muted" x="380" y="220">DashScope Embeddings</text>
+
+  <rect class="box" x="630" y="150" width="260" height="110"/>
+  <text class="text" x="660" y="192">VectorStore</text>
+  <text class="muted" x="660" y="220">存储向量 + 检索</text>
+
+  <rect class="accent" x="70" y="320" width="820" height="140"/>
+  <text class="text" x="100" y="362">回答问题</text>
+  <text class="muted" x="100" y="390">Query → embedding → topK 检索 → 把上下文拼进 Prompt → Qwen 生成最终答案</text>
+
+  <path class="arrow" d="M 330 205 L 350 205"/>
+  <path class="arrow" d="M 610 205 L 630 205"/>
+  <path class="arrow" d="M 480 260 L 480 320"/>
+</svg>
