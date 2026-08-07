@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <style>
+      .bg { fill: #ffffff; }
+      .title { font: 700 22px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .muted { font: 14px Arial, Helvetica, sans-serif; fill: #4b5568; }
+      .box { fill: #f7f9fc; stroke: #1f2a44; stroke-width: 2; rx: 14; }
+      .accent { fill: #fff7ed; stroke: #f97316; stroke-width: 2; rx: 14; }
+      .text { font: 16px Arial, Helvetica, sans-serif; fill: #0b1324; }
+      .arrow { stroke: #1f2a44; stroke-width: 2.5; fill: none; marker-end: url(#m); }
+    </style>
+    <marker id="m" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2a44"/>
+    </marker>
+  </defs>
+  <rect class="bg" x="0" y="0" width="960" height="540"/>
+  <text class="title" x="40" y="54">函数调用（Tools）闭环：提议 → 执行 → 回传</text>
+  <text class="muted" x="40" y="86">关键：工具必须白名单 + 参数校验 + 鉴权 + 审计，模型只负责“提议”。</text>
+
+  <rect class="box" x="70" y="150" width="250" height="110"/>
+  <text class="text" x="100" y="192">用户问题</text>
+  <text class="muted" x="100" y="220">查订单 + 解释规则</text>
+
+  <rect class="box" x="355" y="150" width="250" height="110"/>
+  <text class="text" x="385" y="192">ChatClient + 工具声明</text>
+  <text class="muted" x="385" y="220">name + schema + handler</text>
+
+  <rect class="box" x="640" y="150" width="250" height="110"/>
+  <text class="text" x="670" y="192">模型返回工具调用</text>
+  <text class="muted" x="670" y="220">函数名 + JSON 参数</text>
+
+  <rect class="accent" x="355" y="320" width="535" height="140"/>
+  <text class="text" x="385" y="362">应用执行工具</text>
+  <text class="muted" x="385" y="390">校验/鉴权/超时 → 调用 DB/HTTP → 返回结构化结果</text>
+  <text class="muted" x="385" y="418">模型据此生成最终自然语言答案</text>
+
+  <path class="arrow" d="M 320 205 L 355 205"/>
+  <path class="arrow" d="M 605 205 L 640 205"/>
+  <path class="arrow" d="M 760 260 L 760 320"/>
+</svg>
